@@ -4,7 +4,7 @@ import { FiArrowLeft, FiSave, FiAlertCircle, FiSettings, FiCloud, FiUploadCloud,
 import { FcGoogle } from 'react-icons/fc';
 import { useI18n } from '../lib/i18n';
 import { User, ViewName } from '../App';
-import { getApiBaseUrl } from '../lib/api';
+import { useApiStatus } from '../lib/api';
 
 interface ViewProps {
   setActiveView: (view: ViewName) => void;
@@ -22,11 +22,11 @@ type ApiStatus = 'connected' | 'not_connected';
 
 const ApiSettingsView: React.FC<ViewProps> = ({ setActiveView, user }) => {
   const { t } = useI18n();
+  const apiStatus = useApiStatus();
   
   // App-wide status
   const [appVersion, setAppVersion] = useState('');
-  const isLiveApi = !!getApiBaseUrl();
-
+  
   // State for Backend API settings
   const [apiUrl, setApiUrl] = useState('');
   const [backendSaveStatus, setBackendSaveStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -153,6 +153,16 @@ const ApiSettingsView: React.FC<ViewProps> = ({ setActiveView, user }) => {
     </span>
   );
 
+  const renderApiModeBadge = () => {
+    if (apiStatus === 'live') {
+      return <span className="font-bold py-1 px-3 rounded-full bg-green-100 text-green-800">{t('apiSettings.apiModeLive')}</span>;
+    }
+    if (apiStatus === 'fallback') {
+      return <span className="font-bold py-1 px-3 rounded-full bg-orange-100 text-orange-800">{t('apiSettings.apiModeFallback')}</span>;
+    }
+    return <span className="font-bold py-1 px-3 rounded-full bg-yellow-100 text-yellow-800">{t('apiSettings.apiModeMock')}</span>;
+  };
+
   return (
     <div className="h-full w-full bg-gray-50 z-[2000] absolute top-0 left-0 flex flex-col">
       <header className="p-4 flex items-center border-b bg-white flex-shrink-0 sticky top-0">
@@ -178,15 +188,7 @@ const ApiSettingsView: React.FC<ViewProps> = ({ setActiveView, user }) => {
             <div className="space-y-3 text-sm">
                 <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-600">{t('apiSettings.apiMode')}</span>
-                    {isLiveApi ? (
-                        <span className="font-bold py-1 px-3 rounded-full bg-green-100 text-green-800">
-                            {t('apiSettings.apiModeLive')}
-                        </span>
-                    ) : (
-                        <span className="font-bold py-1 px-3 rounded-full bg-yellow-100 text-yellow-800">
-                            {t('apiSettings.apiModeMock')}
-                        </span>
-                    )}
+                    {renderApiModeBadge()}
                 </div>
                 <div className="flex justify-between items-center">
                     <span className="font-semibold text-gray-600">{t('apiSettings.appVersion')}</span>

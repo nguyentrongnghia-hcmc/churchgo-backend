@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { FiArrowLeft, FiPlus, FiSearch, FiChevronLeft, FiChevronRight, FiChevronsLeft, FiChevronsRight, FiArrowUp, FiArrowDown, FiUpload } from 'react-icons/fi';
 import { useI18n } from '../lib/i18n';
 import { User, Church, ViewName } from '../App';
-import { getChurches, getApiBaseUrl } from '../lib/api';
+import { getChurches, useApiStatus } from '../lib/api';
 
 type SortKey = keyof Pick<Church, 'name' | 'address' | 'diocese'>;
 
@@ -19,6 +19,7 @@ const ITEMS_PER_PAGE = 12;
 
 const AdminView: React.FC<ViewProps> = ({ setActiveView, user, onEditChurch, onAddNewChurch, onImportClick }) => {
   const { t } = useI18n();
+  const apiStatus = useApiStatus();
   const [churches, setChurches] = useState<Church[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -26,8 +27,6 @@ const AdminView: React.FC<ViewProps> = ({ setActiveView, user, onEditChurch, onA
   const [totalPages, setTotalPages] = useState(0);
   const [totalChurches, setTotalChurches] = useState(0);
   const [sortConfig, setSortConfig] = useState<{ key: SortKey; direction: 'ascending' | 'descending' } | null>({ key: 'name', direction: 'ascending' });
-
-  const isLiveApi = !!getApiBaseUrl();
 
   const fetchChurches = useCallback(async () => {
     if (user?.role !== 'superadmin') return;
@@ -85,6 +84,16 @@ const AdminView: React.FC<ViewProps> = ({ setActiveView, user, onEditChurch, onA
     return sortConfig.direction === 'ascending' ? <FiArrowUp className="inline ml-1" /> : <FiArrowDown className="inline ml-1" />;
   };
 
+  const renderApiStatusBadge = () => {
+    if (apiStatus === 'live') {
+      return <span className="text-xs font-bold py-1 px-2 rounded-full bg-green-100 text-green-800">{t('apiSettings.apiModeLive')}</span>;
+    }
+    if (apiStatus === 'fallback') {
+      return <span className="text-xs font-bold py-1 px-2 rounded-full bg-orange-100 text-orange-800">{t('apiSettings.apiModeFallback')}</span>;
+    }
+    return <span className="text-xs font-bold py-1 px-2 rounded-full bg-yellow-100 text-yellow-800">{t('apiSettings.apiModeMock')}</span>;
+  };
+
   return (
     <div className="h-full w-full bg-gray-50 z-[2000] absolute top-0 left-0 flex flex-col">
       <header className="p-3 md:p-4 flex items-center justify-between border-b bg-white flex-shrink-0 sticky top-0">
@@ -120,11 +129,7 @@ const AdminView: React.FC<ViewProps> = ({ setActiveView, user, onEditChurch, onA
               />
             </div>
             <div className="flex items-center gap-4 justify-end">
-              {isLiveApi ? (
-                  <span className="text-xs font-bold py-1 px-2 rounded-full bg-green-100 text-green-800">LIVE API</span>
-              ) : (
-                  <span className="text-xs font-bold py-1 px-2 rounded-full bg-yellow-100 text-yellow-800">MOCK DATA</span>
-              )}
+              {renderApiStatusBadge()}
               <div className="text-right text-gray-600 font-semibold flex-shrink-0">
                 {t('admin.total')}: {totalChurches}
               </div>

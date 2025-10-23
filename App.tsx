@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import L from 'leaflet';
+import { FiWifiOff } from 'react-icons/fi';
 import MapComponent from './components/MapComponent';
 import TopNav from './components/TopNav';
 import Clock from './components/Clock';
@@ -15,8 +16,8 @@ import MainActionPanel from './components/MainActionPanel';
 import SearchContainer from './components/SearchContainer';
 import ChurchDetailPanel from './components/ChurchDetailPanel';
 import AppInfoView from './components/AppInfoView';
-import { I18nProvider } from './lib/i18n';
-import { createChurch, updateChurch, deleteChurch as apiDeleteChurch, getAllChurches } from './lib/api';
+import { I18nProvider, useI18n } from './lib/i18n';
+import { createChurch, updateChurch, deleteChurch as apiDeleteChurch, getAllChurches, useApiStatus } from './lib/api';
 
 
 export type ViewName = 'map' | 'account' | 'settings' | 'history' | 'admin' | 'churchDetail' | 'apiSettings' | 'appInfo';
@@ -49,6 +50,8 @@ export interface Church {
 }
 
 const AppContent: React.FC = () => {
+  const { t } = useI18n();
+  const apiStatus = useApiStatus();
   const [activeView, setActiveView] = useState<ViewName>('map');
   const [isImportViewOpen, setIsImportViewOpen] = useState(false);
   const [user, setUser] = useState<User | null>(null);
@@ -199,6 +202,15 @@ const AppContent: React.FC = () => {
       default:
         return (
           <>
+            {apiStatus === 'fallback' && (
+              <div 
+                className="absolute top-0 left-0 right-0 bg-orange-500 text-white text-sm font-semibold text-center p-1 z-[1001] flex items-center justify-center gap-2"
+                role="alert"
+              >
+                <FiWifiOff />
+                <span>{t('api.fallbackWarning')}</span>
+              </div>
+            )}
             <MapComponent 
               churches={filteredChurches}
               selectedChurch={selectedChurch}

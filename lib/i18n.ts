@@ -192,8 +192,12 @@ const translations = {
       appVersion: 'Phiên bản',
       apiMode: 'Nguồn Dữ liệu',
       apiModeLive: 'LIVE API',
-      apiModeMock: 'MOCK DATA'
+      apiModeMock: 'DỮ LIỆU MẪU',
+      apiModeFallback: 'DỰ PHÒNG (NGOẠI TUYẾN)'
     },
+    api: {
+      fallbackWarning: 'Mất kết nối API. Đang hiển thị dữ liệu ngoại tuyến.'
+    }
   },
   en: {
     topNav: {
@@ -350,8 +354,12 @@ const translations = {
       appVersion: 'Version',
       apiMode: 'Data Source',
       apiModeLive: 'LIVE API',
-      apiModeMock: 'MOCK DATA'
+      apiModeMock: 'MOCK DATA',
+      apiModeFallback: 'FALLBACK (OFFLINE)'
     },
+    api: {
+      fallbackWarning: 'API connection lost. Displaying offline data.'
+    }
   }
 };
 
