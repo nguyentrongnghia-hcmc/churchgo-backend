@@ -1,0 +1,7 @@
+{
+  "name": "ChurchGo 1.1.14",
+  "description": "A ride-sharing and vehicle service application with an interactive map interface, allowing users to select services, choose destinations, and manage settings.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

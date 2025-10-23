@@ -1,0 +1,245 @@
+
+[
+  {
+    "id": 1,
+    "name": "Nhà thờ Đức Bà Sài Gòn",
+    "address": "01 Công xã Paris, Bến Nghé, Quận 1, TPHCM",
+    "diocese": "Tổng giáo phận Sài Gòn",
+    "phone": "028 3822 0487",
+    "massTimes": {
+      "weekdays": "5:30, 17:30",
+      "saturday": "17:30",
+      "sunday": "5:30, 6:45, 8:00, 9:30, 16:00, 17:15, 18:30"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Nh%C3%A0_th%E1%BB%9D_%C4%90%E1%BB%A9c_B%C3%A0_S%C3%A0i_G%C3%B2n_-_Th%C3%A1ng_12-2021.jpg/1280px-Nh%C3%A0_th%E1%BB%9D_%C4%90%E1%BB%A9c_B%C3%A0_S%C3%A0i_G%C3%B2n_-_Th%C3%A1ng_12-2021.jpg",
+    "announcements": [
+      "Nhà thờ đang trong giai đoạn trùng tu, giờ lễ có thể thay đổi."
+    ],
+    "lat": 10.779765,
+    "lng": 106.699099
+  },
+  {
+    "id": 2,
+    "name": "Nhà thờ Tân Định",
+    "address": "289 Hai Bà Trưng, Phường 8, Quận 3, TPHCM",
+    "diocese": "Tổng giáo phận Sài Gòn",
+    "phone": "028 3829 0093",
+     "massTimes": {
+      "weekdays": "5:00, 6:15, 17:30, 19:00",
+      "saturday": "19:00",
+      "sunday": "5:00, 6:15, 7:30, 9:00, 16:00, 17:30, 19:00"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Tan_Dinh_Church_in_Ho_Chi_Minh_City%2C_Vietnam_01.jpg/1024px-Tan_Dinh_Church_in_Ho_Chi_Minh_City%2C_Vietnam_01.jpg",
+    "announcements": [],
+    "lat": 10.789139,
+    "lng": 106.689793
+  },
+  {
+    "id": 3,
+    "name": "Nhà thờ Huyện Sĩ",
+    "address": "1 Tôn Thất Tùng, P. Phạm Ngũ Lão, Quận 1, TPHCM",
+    "diocese": "Tổng giáo phận Sài Gòn",
+    "phone": "028 3925 0828",
+     "massTimes": {
+      "weekdays": "5:30, 17:30",
+      "saturday": "17:30",
+      "sunday": "6:00, 7:30, 9:00, 16:30, 18:00"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Huyen_Sy_Church.jpg/1280px-Huyen_Sy_Church.jpg",
+    "announcements": [],
+    "lat": 10.770020,
+    "lng": 106.691760
+  },
+  {
+    "id": 4,
+    "name": "Nhà thờ Cha Tam",
+    "address": "25 Học Lạc, Phường 14, Quận 5, TPHCM",
+    "diocese": "Tổng giáo phận Sài Gòn",
+    "phone": "028 3855 0332",
+     "massTimes": {
+      "weekdays": "5:30, 17:30",
+      "saturday": "18:00",
+      "sunday": "6:30, 8:00, 16:30, 18:00"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/St_Francis_Xavier_Church%2C_Cholon_-_Saigon_2017.jpg/1280px-St_Francis_Xavier_Church%2C_Cholon_-_Saigon_2017.jpg",
+    "announcements": [],
+    "lat": 10.751100,
+    "lng": 106.661720
+  },
+  {
+    "id": 5,
+    "name": "Nhà thờ Kỳ Đồng",
+    "address": "154 Kỳ Đồng, Phường 9, Quận 3, TPHCM",
+    "diocese": "Tổng giáo phận Sài Gòn",
+    "phone": "028 3931 6890",
+     "massTimes": {
+      "weekdays": "5:30, 17:30",
+      "saturday": "17:30",
+      "sunday": "5:30, 7:00, 8:30, 16:00, 17:30, 19:00"
+    },
+    "imageUrl": "https://www.saigon-online.net/wp-content/uploads/2021/05/nha-tho-ky-dong-quan-3.jpg",
+    "announcements": [],
+    "lat": 10.784410,
+    "lng": 106.684120
+  },
+  {
+    "id": 6,
+    "name": "Nhà thờ Lớn Hà Nội",
+    "address": "40 Nhà Chung, Hoàn Kiếm, Hà Nội",
+    "diocese": "Tổng giáo phận Hà Nội",
+    "phone": "024 3828 5965",
+    "massTimes": {
+      "weekdays": "5:30, 18:15",
+      "saturday": "18:00",
+      "sunday": "5:00, 7:00, 9:00, 11:00, 16:00, 18:00"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/St._Joseph%27s_Cathedral%2C_Hanoi.jpg/1024px-St._Joseph%27s_Cathedral%2C_Hanoi.jpg",
+    "announcements": [],
+    "lat": 21.0287,
+    "lng": 105.8491
+  },
+  {
+    "id": 7,
+    "name": "Nhà thờ Cửa Bắc",
+    "address": "56 Phan Đình Phùng, Ba Đình, Hà Nội",
+    "diocese": "Tổng giáo phận Hà Nội",
+    "phone": "024 3734 5013",
+    "massTimes": {
+      "weekdays": "5:30, 18:30",
+      "saturday": "18:30",
+      "sunday": "6:30, 8:30, 10:30, 17:00, 19:00"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Cua_Bac_Church_in_Hanoi.JPG/1280px-Cua_Bac_Church_in_Hanoi.JPG",
+    "announcements": [],
+    "lat": 21.0396,
+    "lng": 105.8454
+  },
+  {
+    "id": 8,
+    "name": "Nhà thờ Chính tòa Đà Nẵng",
+    "address": "156 Trần Phú, Hải Châu, Đà Nẵng",
+    "diocese": "Giáo phận Đà Nẵng",
+    "phone": "0236 382 5293",
+    "massTimes": {
+      "weekdays": "5:00, 17:00",
+      "saturday": "17:00",
+      "sunday": "5:15, 8:00, 10:00, 15:00, 17:00, 18:30"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Da_Nang_Cathedral_2.jpg/1024px-Da_Nang_Cathedral_2.jpg",
+    "announcements": [],
+    "lat": 16.0691,
+    "lng": 108.2235
+  },
+  {
+    "id": 9,
+    "name": "Nhà thờ Phú Cam",
+    "address": "Phước Vĩnh, Thành phố Huế, Thừa Thiên Huế",
+    "diocese": "Tổng giáo phận Huế",
+    "phone": "0234 382 4586",
+    "massTimes": {
+      "weekdays": "5:00, 19:00",
+      "saturday": "19:00",
+      "sunday": "5:30, 8:00, 15:00, 18:30"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Phu_Cam_Cathedral_2016.jpg/1280px-Phu_Cam_Cathedral_2016.jpg",
+    "announcements": [],
+    "lat": 16.4526,
+    "lng": 107.5818
+  },
+  {
+    "id": 10,
+    "name": "Nhà thờ Con Gà Đà Lạt",
+    "address": "15 Trần Phú, Phường 3, Đà Lạt",
+    "diocese": "Giáo phận Đà Lạt",
+    "phone": "0263 382 2343",
+    "massTimes": {
+      "weekdays": "5:15, 17:15",
+      "saturday": "17:15",
+      "sunday": "5:30, 7:00, 8:30, 16:00, 18:00"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Dalat_Cathedral_-_panoramio.jpg/1280px-Dalat_Cathedral_-_panoramio.jpg",
+    "announcements": [],
+    "lat": 11.936,
+    "lng": 108.438
+  },
+  {
+    "id": 11,
+    "name": "Vương cung thánh đường Phú Nhai",
+    "address": "Xuân Phương, Xuân Trường, Nam Định",
+    "diocese": "Giáo phận Bùi Chu",
+    "phone": "0228 387 5033",
+    "massTimes": {
+      "weekdays": "5:00, 19:00",
+      "saturday": "19:00",
+      "sunday": "5:00, 7:30, 15:00, 16:30"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Phu_Nhai_Basilica_-_panoramio.jpg/1280px-Phu_Nhai_Basilica_-_panoramio.jpg",
+    "announcements": [],
+    "lat": 20.3541,
+    "lng": 106.3986
+  },
+  {
+    "id": 12,
+    "name": "Nhà thờ đá Phát Diệm",
+    "address": "Phát Diệm, Kim Sơn, Ninh Bình",
+    "diocese": "Giáo phận Phát Diệm",
+    "phone": "0229 386 2058",
+    "massTimes": {
+      "weekdays": "5:00, 19:00",
+      "saturday": "19:00",
+      "sunday": "5:00, 7:00, 9:30, 16:00, 18:00"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Ph%C3%A1t_Di%E1%BB%87m_Cathedral.jpg/1280px-Ph%C3%A1t_Di%E1%BB%87m_Cathedral.jpg",
+    "announcements": [],
+    "lat": 20.0933,
+    "lng": 106.0792
+  },
+  {
+    "id": 13,
+    "name": "Nhà thờ gỗ Kon Tum",
+    "address": "13 Nguyễn Huệ, Thống Nhất, Kon Tum",
+    "diocese": "Giáo phận Kon Tum",
+    "phone": "0260 386 2445",
+    "massTimes": {
+      "weekdays": "5:00, 19:00",
+      "saturday": "19:00",
+      "sunday": "5:30, 7:30, 9:30, 15:00, 17:00"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Nh%C3%A0_th%E1%BB%9D_g%E1%BB%97_Kon_Tum.jpg/1280px-Nh%C3%A0_th%E1%BB%9D_g%E1%BB%97_Kon_Tum.jpg",
+    "announcements": [],
+    "lat": 14.3512,
+    "lng": 108.0051
+  },
+  {
+    "id": 14,
+    "name": "Nhà thờ Mằng Lăng",
+    "address": "An Thạch, Tuy An, Phú Yên",
+    "diocese": "Giáo phận Qui Nhơn",
+    "phone": "0257 387 1225",
+    "massTimes": {
+      "weekdays": "5:00",
+      "saturday": "18:00",
+      "sunday": "7:00"
+    },
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Nh%C3%A0_th%E1%BB%9D_M%E1%BA%B1ng_L%C4%83ng_2.JPG/1280px-Nh%C3%A0_th%E1%BB%9D_M%E1%BA%B1ng_L%C4%83ng_2.JPG",
+    "announcements": [],
+    "lat": 13.3134,
+    "lng": 109.281
+  },
+   {
+    "id": 15,
+    "name": "Nhà thờ Chánh tòa Cần Thơ",
+    "address": "14 Nguyễn Thị Minh Khai, Ninh Kiều, Cần Thơ",
+    "diocese": "Giáo phận Cần Thơ",
+    "phone": "0292 381 3343",
+    "massTimes": {
+      "weekdays": "5:00, 17:30",
+      "saturday": "17:30",
+      "sunday": "5:00, 7:00, 17:00, 19:00"
+    },
+    "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipN3-v-5Kz4P-C9Uj6uB_M-Kz_B7s_V_b-H7A-8=s1360-w1360-h1020",
+    "announcements": [],
+    "lat": 10.033,
+    "lng": 105.787
+  }
+]
